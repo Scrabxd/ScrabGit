@@ -1,8 +1,6 @@
-use core::panic;
-use std::{env, fs::{self, File}, io::Write, path::Path};
-use crate::utils::detect_changes::Status;
-
-pub fn scrab_init(){
+use std::{env, fs};
+use crate::utils::{changes::Status, create_file::create_file, hash_map_insert::hash_map_insert};
+pub fn repo_init(){
     let mut status = Status::new();
     let current_dir = env::current_dir().unwrap();
 
@@ -14,27 +12,17 @@ pub fn scrab_init(){
         fs::create_dir(&scrab_dir).expect("Failed to create file folder for repository.")
     }
 
+    let init_hash = status.calculate_hash(&scrab_dir);
 
 
-    let file_path = scrab_dir.join("hashes.scr");
-
-    //Create hashtable with hashes for each file.
-    let status = status.calculate_hash(&current_dir);
-    match File::create(file_path) {
-        Ok(mut file) =>{
-            match file.write_all(serde_json::to_string(status).expect("Error serializing HashMap").as_bytes()){
-                Ok(_) => {
-                    println!("Initialized Scrab repository.")
-                }
-                Err(e) => {
-                    panic!("Error while Initializing repository: {}", e)
-                }
-            }
+    match create_file("hashes_current.scr".to_string()){
+        Ok(file) => {
+            hash_map_insert(init_hash, file).unwrap();
+            return ();
         }
-        Err(e) =>{
-            panic!("{}",e)
-        }
+        Err(e)  => panic!("{}",e)
     }
+
     
 
 }

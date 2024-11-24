@@ -2,6 +2,8 @@
 // /FOLDERNAME
 // FILES
 // /folder/file
-// Comments
+
+// <-- Comments
 
 /target
+/.git

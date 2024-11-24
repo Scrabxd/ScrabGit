@@ -1,5 +1,5 @@
 use core::panic;
-use std::{collections::HashMap, env};
+use std::collections::HashMap;
 use std::fs;
 use std::path::Path;
 use regex::Regex;
@@ -9,7 +9,7 @@ use sha2::{Sha256, Digest};
 use crate::helpers::read_ignore::{read_ignore, should_ignore};
 // Struct used for the creation of hashtable and other functions.
 pub struct Status {
-    file_hash: HashMap<String,String>
+    file_hash: HashMap<String ,String>,
 }
 
 
@@ -30,7 +30,7 @@ impl Status{
         for entry in WalkDir::new(path).into_iter().filter_map(Result::ok){
 
             let file_path:&Path = entry.path();
-            let condition:&String = &file_path.to_string_lossy().to_string();
+            let condition:&str = &file_path.to_string_lossy().to_string();
 
 
             if file_path.is_dir() && file_path.file_name().unwrap().to_str().unwrap().starts_with('.') {
@@ -64,30 +64,12 @@ impl Status{
     
     
 
-        pub fn get_current_hashes(&mut self){
-            let dir:&Path = Path::new(".scrab/hashes.scr");
-    
-            match fs::read_to_string(dir){
-                Ok(contents) => {
-                    println!("{}", contents)
-                }
-                Err(e)=>{
-                    eprintln!("{}",e)
-                }
-            }        
-        }
-}
-
-
-pub fn detect_changes(){
-
-    let current_dir = env::current_dir().unwrap();
-
-    let mut status = Status::new();
-
-    status.calculate_hash(&current_dir);
-    
-    // status.get_current_hashes();
-
-
+        pub fn get_current_hashes(&mut self) -> String{
+            let dir:&Path = Path::new(".scrab/hashes_current.scr");
+            
+            match fs::read_to_string(dir) {
+                Ok(contents) => contents,
+                Err(e) => panic!("{}",e),
+            }
+    }
 }

@@ -1,0 +1,21 @@
+{
+    "C:\\Users\\scrab\\Desktop\\Rust-version control\\.idea\\Rust-version control.iml": "851eaea5f04bc5edf44df333276b257a245f6bfcd346cbf3ccb8c568c57bf021",
+    "C:\\Users\\scrab\\Desktop\\Rust-version control\\src\\helpers\\read_ignore.rs": "09e084ac2122327567188a23894f0d9ad0155dba63e33210c4528c839b37d0cd",
+    "C:\\Users\\scrab\\Desktop\\Rust-version control\\src\\utils\\compare_changes.rs": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "C:\\Users\\scrab\\Desktop\\Rust-version control\\Cargo.toml": "2ee37965b227943aa017dc97671c50cffa5015fa908fb6075db95d5f529d0335",
+    "C:\\Users\\scrab\\Desktop\\Rust-version control\\src\\utils\\mod.rs": "83409a210441de3bd402d2d27b1fc30a9f91c2b950212c2b885722dd8fe33856",
+    "C:\\Users\\scrab\\Desktop\\Rust-version control\\src\\helpers\\mod.rs": "2095a7a0ed65b332ad1f96a66bab936a76e4e8d63a62d554e309867a68fe8d99",
+    "C:\\Users\\scrab\\Desktop\\Rust-version control\\src\\utils\\detect_changes.rs": "0181eb7360044528506a6fca181fb6a34e343ae569a2adb4c91a047566eb55be",
+    "C:\\Users\\scrab\\Desktop\\Rust-version control\\src\\main.rs": "e3a973cf770dc5641524ec5de67f1bc52e83e440de3bc1950df004e8ad0cb271",
+    "C:\\Users\\scrab\\Desktop\\Rust-version control\\src\\commands\\commit.rs": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "C:\\Users\\scrab\\Desktop\\Rust-version control\\.scrabignore": "34f7d482a5b6363cdff30a7bee321285fa4dc840be62d8648d8aa9a9a111c0f2",
+    "C:\\Users\\scrab\\Desktop\\Rust-version control\\.idea\\.gitignore": "1bfdece3645ed8ed356030f22cc2004dc3f401ff060ac3d24de811c3bcd82e16",
+    "C:\\Users\\scrab\\Desktop\\Rust-version control\\.scrab\\hashes_current.scr": "5dd50b448bf5ef04ce6b12610cfef65f92f701b2660260b54f6c386af0f61d90",
+    "C:\\Users\\scrab\\Desktop\\Rust-version control\\.idea\\modules.xml": "49e8bc020fe79f0f1db83d56239cd259d9f216008ab9a69e79544b9ce77e5186",
+    "C:\\Users\\scrab\\Desktop\\Rust-version control\\.idea\\workspace.xml": "56aaa3d564ffd1d425cff194c28c84dff18f2fd3c17701112e851eda4d5c582a",
+    "C:\\Users\\scrab\\Desktop\\Rust-version control\\bin\\scrab.bat": "bbee78582892fa18cfe0bece49193fa0924d7232db725dc4962bb14d3d144d43",
+    "C:\\Users\\scrab\\Desktop\\Rust-version control\\src\\commands\\init.rs": "502135525193ba374c410c4ec060785eb92d3fd247fb9d0530b2125a7d1ee3fe",
+    "C:\\Users\\scrab\\Desktop\\Rust-version control\\src\\commands\\mod.rs": "5c5d81f3d7620c60cae41903e3ff70c31fb7e1b0a9475460dc40dc95eeb8aa41",
+    "C:\\Users\\scrab\\Desktop\\Rust-version control\\license": "1ff04f7c0c31ed15a5bdadba5b038c90699f76cf8e7fc55619cb27a31689fe9b",
+    "C:\\Users\\scrab\\Desktop\\Rust-version control\\Cargo.lock": "3f7c32ea994d94f01748cd6d396a0677f9d91f10aa38ab7cf1cc7a0cbc2343ef"
+}
