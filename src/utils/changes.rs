@@ -1,4 +1,5 @@
 use core::panic;
+use std::io::{self, ErrorKind};
 use std::collections::HashMap;
 use std::fs;
 use std::path::Path;
@@ -64,12 +65,17 @@ impl Status{
     
     
 
-        pub fn get_current_hashes(&mut self) -> String{
-            let dir:&Path = Path::new(".scrab/hashes_current.scr");
+        pub fn get_current_hashes(&mut self, hash_path:&Path) -> Result<String , io::Error>{
             
-            match fs::read_to_string(dir) {
-                Ok(contents) => contents,
-                Err(e) => panic!("{}",e),
+            if hash_path.exists(){   
+                match fs::read_to_string(hash_path) {
+                    Ok(contents) => return Ok(contents),
+                    Err(e) => return Err(e),
+                }
+            }else{
+                Err(io::Error::new(ErrorKind::NotFound, "Hashes couldn't be found please re-run the init command."))
             }
+
+
     }
 }

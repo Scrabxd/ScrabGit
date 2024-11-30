@@ -12,8 +12,14 @@ pub fn repo_init(){
         fs::create_dir(&scrab_dir).expect("Failed to create file folder for repository.")
     }
 
-    let init_hash = status.calculate_hash(&scrab_dir);
+    let init_hash = status.calculate_hash(&current_dir);
 
+    match create_file("add_hash.scr".to_string()){
+        Ok(file) => {
+            hash_map_insert(init_hash, file).unwrap();
+        }
+        Err(e)  => panic!("{}",e)
+    }
 
     match create_file("hashes_current.scr".to_string()){
         Ok(file) => {
@@ -22,6 +28,8 @@ pub fn repo_init(){
         }
         Err(e)  => panic!("{}",e)
     }
+
+    
 
     
 

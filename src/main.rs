@@ -1,4 +1,4 @@
-use commands::add;
+use commands::{add, commit, init, status};
 
 mod commands;
 mod utils;
@@ -6,7 +6,10 @@ mod helpers;
 
 
 fn main() {
-    add::add();
+    // init::repo_init();
+    // status::status();
+    // add::add();
+    commit::commit();
 }
 
 
